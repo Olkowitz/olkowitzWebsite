@@ -1,6 +1,5 @@
 /* Základní styly pro olkowitz.cz */
 
-/* Reset a základní nastavení */
 * {
     margin: 0;
     padding: 0;
@@ -11,23 +10,47 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: #333;
+}
+
+/* ===== Header a navigace ===== */
+header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Přidává se přes main.js při scrollu dolů */
+header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
-header {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 1.8rem;
 }
 
 nav a {
@@ -40,7 +63,14 @@ nav a:hover {
     color: #007bff;
 }
 
-/* Hero section */
+/* ===== Hlavní obsah ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Hero sekce (pouze index.html) ===== */
 #hero {
     position: relative;
     height: 70vh;
@@ -61,10 +91,7 @@ nav a:hover {
 #hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
@@ -86,6 +113,7 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
+/* ===== Tlačítka ===== */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -110,7 +138,21 @@ nav a:hover {
     background-color: #545b62;
 }
 
-/* Footer */
+/* ===== Sekce akcí (events.html) ===== */
+.event {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+}
+
+.event h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* ===== Patička ===== */
 footer {
     text-align: center;
     padding: 2rem 0;
@@ -133,84 +175,16 @@ footer {
     color: #007bff;
 }
 
-/* Responzivita */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* Styly pro akce */
-.event {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border-left: 5px solid #007bff;
-}
-
-.event h2 {
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-/* Navigace s logem */
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.8rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #007bff;
-}
-
-/* Responzivita */
+/* ===== Responzivita ===== */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     nav ul {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
     }
 }
-
-/*
-.sticky{
-background:#111;
-position:fixed;
-top:0;
-width:100%;
-}
-*/

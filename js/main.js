@@ -10,14 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // Zde můžete přidat interakce, např. smooth scroll nebo menu
 });
-/*
-window.addEventListener("scroll",()=>{
 
-let nav=document.querySelector("nav");
-
-if(window.scrollY>50){
-nav.classList.add("sticky");
-}
-
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
 });
-*/ 
