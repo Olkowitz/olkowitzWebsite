@@ -42,24 +42,48 @@ nav a:hover {
 
 /* Hero section */
 #hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 6rem 2rem;
-    background-color: #e9f5ff;
-    border-radius: 8px;
+    color: white;
     margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* tmavý overlay pro čitelnost */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 #hero h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
-    color: #222;
 }
 
 .lead {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: #555;
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
