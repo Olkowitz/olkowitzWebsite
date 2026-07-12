@@ -31,7 +31,8 @@ header.scrolled {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -187,4 +188,16 @@ footer {
         gap: 1rem;
         text-align: center;
     }
+}
+
+/* ===== 404 stránka ===== */
+.not-found {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.not-found h1 {
+    font-size: 5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
 }
