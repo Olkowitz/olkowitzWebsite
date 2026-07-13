@@ -248,3 +248,8 @@ footer {
     color: #007bff;
     margin-bottom: 1rem;
 }
+
+.not-found p {
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
