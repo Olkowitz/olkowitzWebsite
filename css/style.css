@@ -132,11 +132,12 @@ main {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #F9F203;
+    color: #333;
 }
 
 .btn-secondary:hover {
-    background-color: #545b62;
+    background-color: #d9d300;
 }
 
 /* ===== Sekce akcí (events.html) ===== */
@@ -203,15 +204,15 @@ footer {
 }
 
 .timeline-nav a:hover {
-    background-color: #007bff;
+    background-color: #0133C5;
     color: white;
-    border-color: #007bff;
+    border-color: #0133C5;
 }
 
 section[aria-labelledby] h2 {
     margin: 2rem 0 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #0133C5;
 }
 
 /* ===== Hamburger tlačítko ===== */
@@ -317,4 +318,31 @@ section[aria-labelledby] h2 {
     .contact-info {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* ===== Stránka O nás ===== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.value-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #0133C5;
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.value-item h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
 }
