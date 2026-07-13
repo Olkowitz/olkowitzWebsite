@@ -15,3 +15,22 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     header.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+// Hamburger menu na mobilu
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Zavřít menu po kliknutí na odkaz
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}

@@ -176,17 +176,54 @@ footer {
     color: #007bff;
 }
 
+/* ===== Hamburger tlačítko ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+}
+
 /* ===== Responzivita ===== */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.open {
+        max-height: 300px;
     }
 
     nav ul {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1rem 0;
     }
 }
 
