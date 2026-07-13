@@ -281,3 +281,40 @@ section[aria-labelledby] h2 {
     max-width: 500px;
     margin: 0 auto 1rem;
 }
+
+/* ===== Kontaktní stránka ===== */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item dt {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.contact-item dd {
+    margin: 0;
+    color: #555;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
