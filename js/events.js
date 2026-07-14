@@ -5,11 +5,16 @@ async function loadEvents() {
   const now = new Date();
 
   events = events
-    .filter((event) => parseICSDate(event.end) >= now)   // skryje proběhlé akce
-    .sort((a, b) => parseICSDate(a.start) - parseICSDate(b.start)); // seřadí od nejbližší
+    .filter((event) => parseICSDate(event.end) >= now)
+    .sort((a, b) => parseICSDate(a.start) - parseICSDate(b.start));
 
   const container = document.getElementById("events-list");
   container.innerHTML = "";
+
+  if (events.length === 0) {
+    container.innerHTML = "<p>Momentálně nejsou naplánované žádné akce.</p>";
+    return;
+  }
 
   events.forEach((event) => {
     const item = document.createElement("div");
