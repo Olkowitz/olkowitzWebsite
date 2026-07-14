@@ -1,14 +1,14 @@
 [
     {
-        "title": "Zkušební akce",
-        "description": "Testovaci akce pro overeni kalendare.",
+        "title": "Minulá akce test",
+        "description": "Testovaci popis overeni kalendare.",
         "location": "Oleksovice",
-        "start": "20260730T100000Z",
-        "end": "20260730T110000Z"
+        "start": "20250730T100000Z",
+        "end": "20250730T110000Z"
     },
     {
-        "title": "Výročí založení spolku",
-        "description": "Testovací popis k výročí založení spolku.",
+        "title": "Výročí spolku",
+        "description": "Celodenní připomínka k výročí založení spolku.",
         "location": "Sklep",
         "start": "20270608T070000Z",
         "end": "20270608T170000Z"
