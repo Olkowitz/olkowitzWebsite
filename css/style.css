@@ -141,7 +141,7 @@ main {
 }
 
 /* ===== Sekce akcí (events.html) ===== */
-.event {
+.event-item {
     background-color: #f8f9fa;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -149,9 +149,32 @@ main {
     border-left: 5px solid #0133C5;
 }
 
-.event h3 {
+.event-item h3 {
     margin-bottom: 0.5rem;
     color: #333;
+}
+
+.event-item p {
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.event-item button {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.6rem 1.4rem;
+    background-color: #0133C5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-item button:hover {
+    background-color: #0056b3;
 }
 
 /* ===== Patička ===== */
