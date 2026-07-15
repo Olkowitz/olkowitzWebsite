@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }
 });
 
 // Hamburger menu na mobilu

@@ -7,21 +7,48 @@
     <meta name="description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
     <meta property="og:title" content="Kontakt - Olkowitz.cz">
     <meta property="og:description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
-    <meta property="og:image" content="https://olkowitz.cz/images/og-image.jpg">
-    <meta property="og:url" content="https://olkowitz.cz/contact.html">
+    <meta property="og:image" content="https://www.olkowitz.cz/images/og-image.jpg">
+    <meta property="og:url" content="https://www.olkowitz.cz/contact.html">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.olkowitz.cz/contact.html">
     <title>Kontakt - Olkowitz.cz</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Olkowitz z.s.",
+            "url": "https://www.olkowitz.cz/",
+            "logo": "https://www.olkowitz.cz/images/logo.webp",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Oleksovice 133",
+                "postalCode": "671 62",
+                "addressLocality": "Oleksovice",
+                "addressCountry": "CZ"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Olkowitz.cz",
+            "url": "https://www.olkowitz.cz/",
+            "inLanguage": "cs-CZ"
+        }
+    </script>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Přejít na hlavní obsah</a>
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.webp" alt="Olkowitz.cz" height="50">
+                <img src="images/logo.webp" alt="Olkowitz.cz" width="50" height="50">
             </a>
             <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
                 <span></span>
@@ -32,13 +59,13 @@
                 <ul>
                     <li><a href="about.html">O nás</a></li>
                     <li><a href="events.html">Naše akce</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="contact.html" aria-current="page">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section>
             <h1>Kontakt</h1>
             <p>Máte dotaz k naší činnosti? Neváhejte se ozvat.</p>
@@ -92,7 +119,7 @@
             <a href="events.html">Naše akce</a>
             <a href="contact.html">Kontakt</a>
             <a href="index.html">
-                <img src="images/logo.webp" alt="Olkowitz.cz" class="footer-logo">
+                <img src="images/logo.webp" alt="Olkowitz.cz" class="footer-logo" width="30" height="30">
             </a>
         </nav>
     </footer>

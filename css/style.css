@@ -64,6 +64,35 @@ nav a:hover {
     color: #0133C5;
 }
 
+nav a[aria-current="page"] {
+    color: #0133C5;
+    font-weight: 700;
+}
+
+/* Skip link je skrytý mimo obrazovku, dokud na něj uživatel nepřejde klávesnicí */
+.skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -100px;
+    background-color: #0133C5;
+    color: #fff;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 0.75rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #0133C5;
+    outline-offset: 3px;
+}
+
 /* ===== Hlavní obsah ===== */
 main {
     max-width: 1200px;
