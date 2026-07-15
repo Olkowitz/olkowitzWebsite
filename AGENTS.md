@@ -1,4 +1,4 @@
-# AGENTS.md – olkowitzWebsite Development Guide
+# AGENTS.md – Olkowitz Website Development Guide
 
 **Purpose**: This site is a static website for Olkowitz z.s., a Czech environmental nonprofit. Zero-dependency approach — plain HTML/CSS/JavaScript hosted on GitHub Pages.
 
@@ -65,7 +65,7 @@ Edit `events.json` with ICS-formatted date `YYYYMMDDTHHMMSSZ` (UTC). Example:
 ```json
 {"title": "Event Title", "description": "...", "location": "...", "start": "20270608T070000Z", "end": "20270608T170000Z"}
 ```
-Events are auto-loaded and sorted; only future events show.
+Events are autoloaded and sorted; only future events show.
 
 ### Updating Navigation Links
 Edit the `<nav id="main-nav">` block in ALL HTML files (index, about, events, contact). No partial update will sync across pages.
@@ -92,7 +92,7 @@ Use WebP for modern browsers (hero, logo). Keep JPG for OG tags. Store in `image
 ## Common Patterns
 
 ### HTML Form Elements (if needed)
-No forms currently exist. Contact info is static. If adding forms in future, ensure Czech placeholder text and validation messages.
+No forms currently exist. Contact info is static. If adding forms in the future, ensure Czech placeholder text and validation messages.
 
 ### Date Handling
 Always use `parseICSDate()` for event dates, never parse manually. This ensures consistency across events.js.
