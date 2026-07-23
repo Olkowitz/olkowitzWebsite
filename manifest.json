@@ -1,0 +1,27 @@
+{
+    "name": "Olkowitz z.s.",
+    "short_name": "Olkowitz",
+    "description": "Oficiální web spolku Olkowitz z.s. – ochrana přírody a péče o krajinu v Oleksovicích a okolí.",
+    "lang": "cs",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0133C5",
+    "_comment_icons": "TODO: Pro plnohodnotnou PWA instalaci se doporučují PNG ikony 192x192 a 512x512. Vytvořte je (např. z logo.webp), uložte do images/favicon/ a přidejte do pole 'icons' níže. Klíče začínající podtržítkem prohlížeč ignoruje.",
+    "icons": [
+        {
+            "src": "images/favicon/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/logo.webp",
+            "sizes": "any",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ]
+}
+

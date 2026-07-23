@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0133C5">
-    <meta name="description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
-    <meta property="og:title" content="Kontakt - Olkowitz.cz">
-    <meta property="og:description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
+    <meta name="description" content="Jak podpořit spolek Olkowitz z.s. - číslo účtu, QR platba a další možnosti pomoci.">
+    <meta property="og:title" content="Jak nás podpořit - Olkowitz.cz">
+    <meta property="og:description" content="Podpořte péči o krajinu v Oleksovicích - číslo účtu, QR platba a další možnosti pomoci.">
     <meta property="og:image" content="https://www.olkowitz.cz/images/og-image.jpg">
-    <meta property="og:url" content="https://www.olkowitz.cz/contact.html">
+    <meta property="og:url" content="https://www.olkowitz.cz/support.html">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://www.olkowitz.cz/contact.html">
-    <title>Kontakt - Olkowitz.cz</title>
+    <link rel="canonical" href="https://www.olkowitz.cz/support.html">
+    <title>Jak nás podpořit - Olkowitz.cz</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
@@ -53,7 +53,7 @@
                     <li><a href="about.html">O nás</a></li>
                     <li><a href="events.html">Naše akce</a></li>
                     <li><a href="gallery.html">Fotogalerie</a></li>
-                    <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,49 +61,57 @@
 
     <main id="main-content">
         <section>
-            <h1>Kontakt</h1>
-            <p>Máte dotaz k naší činnosti? Neváhejte se ozvat.</p>
+            <h1>Jak nás podpořit</h1>
+            <p class="lead">Každá pomoc má svůj význam.</p>
+            <p>Díky vaší podpoře můžeme pečovat o cenná přírodní místa v Oleksovicích a okolí, sázet stromy,
+                starat se o oleksovické vřesoviště a pořádat vzdělávací akce pro děti i dospělé.</p>
 
             <hr class="divider">
 
-            <dl class="contact-info">
-                <div class="contact-item">
-                    <dt>📍 Sídlo</dt>
-                    <dd>Oleksovice 133<br>671 62 Oleksovice</dd>
+            <h2>Finanční příspěvek</h2>
+            <div class="support-grid">
+                <div class="support-item">
+                    <h3>💳 Bankovní převod</h3>
+                    <!-- Nahraďte placeholdery skutečnými údaji spolku -->
+                    <dl class="support-account">
+                        <div>
+                            <dt>Číslo účtu</dt>
+                            <dd>000000000/0000</dd>
+                        </div>
+                        <div>
+                            <dt>IBAN</dt>
+                            <dd>CZ00 0000 0000 0000 0000 0000</dd>
+                        </div>
+                    </dl>
+                    <p class="support-note">Jako zprávu pro příjemce uveďte prosím „Dar".</p>
                 </div>
 
-                <div class="contact-item">
-                    <dt>🏛 IČO</dt>
-                    <dd>21617694</dd>
+                <div class="support-item">
+                    <h3>📱 QR platba</h3>
+                    <!--
+                        Nahraďte placeholder skutečným QR kódem:
+                        1. Vygenerujte QR platbu (např. na qr-platba.cz) a uložte obrázek
+                           do složky images/ jako qr-platba.png.
+                        2. Vyměňte src="..." níže za "images/qr-platba.png".
+                    -->
+                    <img class="support-qr"
+                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='220'%20height='220'%3E%3Crect%20fill='%23e9ecef'%20width='220'%20height='220'/%3E%3Ctext%20x='50%25'%20y='50%25'%20fill='%23868e96'%20font-family='sans-serif'%20font-size='16'%20text-anchor='middle'%20dominant-baseline='middle'%3EQR%20platba%3C/text%3E%3C/svg%3E"
+                        alt="QR kód pro platbu (bude doplněn)" width="220" height="220" loading="lazy">
+                    <p class="support-note">Naskenujte v mobilní bankovní aplikaci.</p>
                 </div>
-
-                <div class="contact-item">
-                    <dt>📮 Datová schránka</dt>
-                    <dd>7ddrk2b</dd>
-                </div>
-
-                <div class="contact-item">
-                    <dt>✉️ E-mail</dt>
-                    <dd><a id="contact-email" href="#">info[zavinac]olkowitz.cz</a></dd>
-                </div>
-
-                <!-- Telefon zatím není veřejný, po zprovoznění odkomentuj a doplň číslo
-            <div class="contact-item">
-                <dt>📞 Telefon</dt>
-                <dd><a href="tel:+420xxxxxxxxx">+420 xxx xxx xxx</a></dd>
             </div>
-            -->
-            </dl>
 
             <hr class="divider">
 
-            <div class="map-container">
-                <button type="button" id="load-map" class="map-placeholder">
-                    <span class="map-placeholder-icon" aria-hidden="true">🗺️</span>
-                    <span class="map-placeholder-title">Zobrazit mapu se sídlem spolku</span>
-                    <span class="map-placeholder-note">Kliknutím načtete obsah z Google Maps.</span>
-                </button>
-            </div>
+            <h2>Další možnosti pomoci</h2>
+            <p>Podpořit nás můžete i jinak než finančně:</p>
+            <ul>
+                <li>zapojením se do <strong>dobrovolnických akcí</strong> a brigád,</li>
+                <li>sdílením naší činnosti mezi přáteli a známými,</li>
+                <li>odbornými zkušenostmi a radami při péči o krajinu.</li>
+            </ul>
+            <p>Máte-li zájem pomoci nebo se na cokoli zeptat, ozvěte se nám přes <a href="contact.html">kontaktní
+                    stránku</a>.</p>
         </section>
     </main>
 
@@ -147,3 +155,4 @@
 </body>
 
 </html>
+
