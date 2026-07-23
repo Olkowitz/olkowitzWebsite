@@ -1,14 +1,36 @@
 // Základní JavaScript pro olkowitz.cz
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Stránka olkowitz.cz načtena.');
-
     // Aktuální rok v copyrightu
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-    // Zde můžete přidat interakce, např. smooth scroll nebo menu
+
+    // Sestavení klikacího e-mailu (v HTML zůstává [zavinac] jako ochrana proti scraperům)
+    const emailLink = document.getElementById('contact-email');
+    if (emailLink) {
+        const address = 'info' + '@' + 'olkowitz.cz';
+        emailLink.href = 'mailto:' + address;
+        emailLink.textContent = address;
+    }
+
+    // Mapa Google se načte až po kliknutí uživatele (soukromí / GDPR)
+    const loadMapBtn = document.getElementById('load-map');
+    if (loadMapBtn) {
+        loadMapBtn.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.google.com/maps?q=Oleksovice+133,+671+62+Oleksovice&output=embed';
+            iframe.width = '100%';
+            iframe.height = '400';
+            iframe.style.border = '0';
+            iframe.loading = 'lazy';
+            iframe.allowFullscreen = true;
+            iframe.referrerPolicy = 'no-referrer-when-downgrade';
+            iframe.title = 'Mapa - sídlo Olkowitz z.s.';
+            loadMapBtn.replaceWith(iframe);
+        });
+    }
 });
 
 window.addEventListener('scroll', () => {
@@ -26,6 +48,7 @@ if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', () => {
         const isOpen = mainNav.classList.toggle('open');
         menuToggle.setAttribute('aria-expanded', isOpen);
+        menuToggle.setAttribute('aria-label', isOpen ? 'Zavřít menu' : 'Otevřít menu');
     });
 
     // Zavřít menu po kliknutí na odkaz
@@ -33,6 +56,7 @@ if (menuToggle && mainNav) {
         link.addEventListener('click', () => {
             mainNav.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Otevřít menu');
         });
     });
 }

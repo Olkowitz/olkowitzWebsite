@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0133C5">
-    <meta name="description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
-    <meta property="og:title" content="Kontakt - Olkowitz.cz">
-    <meta property="og:description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
+    <meta name="description" content="Fotogalerie spolku Olkowitz z.s. - fotografie z akcí a péče o krajinu.">
+    <meta property="og:title" content="Fotogalerie - Olkowitz.cz">
+    <meta property="og:description" content="Fotografie z akcí a péče o krajinu spolku Olkowitz z.s.">
     <meta property="og:image" content="https://www.olkowitz.cz/images/og-image.jpg">
-    <meta property="og:url" content="https://www.olkowitz.cz/contact.html">
+    <meta property="og:url" content="https://www.olkowitz.cz/gallery.html">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://www.olkowitz.cz/contact.html">
-    <title>Kontakt - Olkowitz.cz</title>
+    <link rel="canonical" href="https://www.olkowitz.cz/gallery.html">
+    <title>Fotogalerie - Olkowitz.cz</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
@@ -52,8 +52,8 @@
                 <ul>
                     <li><a href="about.html">O nás</a></li>
                     <li><a href="events.html">Naše akce</a></li>
-                    <li><a href="gallery.html">Fotogalerie</a></li>
-                    <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+                    <li><a href="gallery.html" aria-current="page">Fotogalerie</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,51 +61,47 @@
 
     <main id="main-content">
         <section>
-            <h1>Kontakt</h1>
-            <p>Máte dotaz k naší činnosti? Neváhejte se ozvat.</p>
+            <h1>Fotogalerie</h1>
+            <p class="lead">Fotografie z našich akcí a péče o krajinu.</p>
 
             <hr class="divider">
 
-            <dl class="contact-info">
-                <div class="contact-item">
-                    <dt>📍 Sídlo</dt>
-                    <dd>Oleksovice 133<br>671 62 Oleksovice</dd>
-                </div>
-
-                <div class="contact-item">
-                    <dt>🏛 IČO</dt>
-                    <dd>21617694</dd>
-                </div>
-
-                <div class="contact-item">
-                    <dt>📮 Datová schránka</dt>
-                    <dd>7ddrk2b</dd>
-                </div>
-
-                <div class="contact-item">
-                    <dt>✉️ E-mail</dt>
-                    <dd><a id="contact-email" href="#">info[zavinac]olkowitz.cz</a></dd>
-                </div>
-
-                <!-- Telefon zatím není veřejný, po zprovoznění odkomentuj a doplň číslo
-            <div class="contact-item">
-                <dt>📞 Telefon</dt>
-                <dd><a href="tel:+420xxxxxxxxx">+420 xxx xxx xxx</a></dd>
-            </div>
+            <!--
+                Jak přidat fotografii:
+                1. Nahrajte obrázek do složky images/galerie/ (ideálně ve formátu WebP).
+                2. Zkopírujte jeden blok <figure class="gallery-item"> ... </figure> níže.
+                3. Vyměňte src="..." za cestu ke svému obrázku a alt="..." za krátký popis.
+                4. Atribut loading="lazy" nechte – zajišťuje, že se obrázek načte až
+                   ve chvíli, kdy k němu uživatel doroluje (rychlejší načítání stránky).
+                5. Po kliknutí na fotografii se otevře zvětšený náhled (lightbox).
+                   Volitelně můžete přidat atribut data-full="cesta/k/velke-fotce.webp",
+                   aby se v náhledu zobrazila verze ve vyšším rozlišení.
             -->
-            </dl>
+            <div class="gallery-grid">
+                <!-- PLACEHOLDER 1 – nahraďte vlastní fotografií -->
+                <figure class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20fill='%23e9ecef'%20width='400'%20height='300'/%3E%3Ctext%20x='50%25'%20y='50%25'%20fill='%23868e96'%20font-family='sans-serif'%20font-size='22'%20text-anchor='middle'%20dominant-baseline='middle'%3EFotografie%201%3C/text%3E%3C/svg%3E"
+                        alt="Ukázkový placeholder – nahraďte popisem fotografie" loading="lazy" width="400"
+                        height="300">
+                    <figcaption>Popisek fotografie (nepovinné)</figcaption>
+                </figure>
 
-            <hr class="divider">
-
-            <div class="map-container">
-                <button type="button" id="load-map" class="map-placeholder">
-                    <span class="map-placeholder-icon" aria-hidden="true">🗺️</span>
-                    <span class="map-placeholder-title">Zobrazit mapu se sídlem spolku</span>
-                    <span class="map-placeholder-note">Kliknutím načtete obsah z Google Maps.</span>
-                </button>
+                <!-- PLACEHOLDER 2 – nahraďte vlastní fotografií -->
+                <figure class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20fill='%23e9ecef'%20width='400'%20height='300'/%3E%3Ctext%20x='50%25'%20y='50%25'%20fill='%23868e96'%20font-family='sans-serif'%20font-size='22'%20text-anchor='middle'%20dominant-baseline='middle'%3EFotografie%202%3C/text%3E%3C/svg%3E"
+                        alt="Ukázkový placeholder – nahraďte popisem fotografie" loading="lazy" width="400"
+                        height="300">
+                    <figcaption>Popisek fotografie (nepovinné)</figcaption>
+                </figure>
             </div>
         </section>
     </main>
+
+    <!-- Lightbox pro zvětšení fotografie (otevírá se kliknutím na obrázek v galerii) -->
+    <dialog id="lightbox" class="lightbox" aria-label="Zvětšená fotografie">
+        <button type="button" class="lightbox-close" aria-label="Zavřít">&times;</button>
+        <img class="lightbox-img" src="" alt="">
+    </dialog>
 
     <footer>
         <p>&copy; <span id="year"></span> olkowitz.cz</p>
@@ -144,6 +140,8 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>
+

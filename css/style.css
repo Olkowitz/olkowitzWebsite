@@ -105,7 +105,10 @@ main {
     position: relative;
     height: 70vh;
     min-height: 500px;
-    background-image: url('../images/hero-bg.webp');
+    /* JPG jako fallback pro prohlížeče bez podpory WebP / image-set */
+    background-image: url('../images/hero-bg.jpg');
+    background-image: -webkit-image-set(url('../images/hero-bg.webp') type('image/webp'), url('../images/hero-bg.jpg') type('image/jpeg'));
+    background-image: image-set(url('../images/hero-bg.webp') type('image/webp'), url('../images/hero-bg.jpg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
     display: flex;
@@ -303,11 +306,13 @@ section[aria-labelledby] h2 {
         width: 100%;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        visibility: hidden;
+        transition: max-height 0.3s ease, visibility 0.3s ease;
     }
 
     nav.open {
         max-height: 300px;
+        visibility: visible;
     }
 
     nav ul {
@@ -366,6 +371,43 @@ section[aria-labelledby] h2 {
     display: block;
 }
 
+/* Placeholder mapy – zobrazí se před načtením Google Maps */
+.map-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 400px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.map-placeholder:hover {
+    background-color: #eef1f5;
+}
+
+.map-placeholder-icon {
+    font-size: 2.5rem;
+}
+
+.map-placeholder-title {
+    font-weight: 600;
+    color: #0133C5;
+}
+
+.map-placeholder-note {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 @media (min-width: 600px) {
     .contact-info {
         grid-template-columns: repeat(2, 1fr);
@@ -397,4 +439,185 @@ section[aria-labelledby] h2 {
 .value-item h3 {
     margin-bottom: 0.5rem;
     color: #333;
+}
+
+/* ===== Tlačítka u akcí (events.html) ===== */
+.event-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.event-item .btn-share {
+    background-color: #fff;
+    color: #0133C5;
+    border: 1px solid #0133C5;
+}
+
+.event-item .btn-share:hover {
+    background-color: #eef1f5;
+}
+
+/* ===== Fotogalerie (gallery.html) ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.gallery-item {
+    margin: 0;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+/* ===== Lightbox (zvětšení fotografie) ===== */
+.lightbox {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: visible;
+}
+
+.lightbox::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-close:hover {
+    color: #0133C5;
+}
+
+/* ===== Sociální ikony v patičce ===== */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.footer-social a {
+    color: #666;
+    display: inline-flex;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0133C5;
+}
+
+/* ===== Stránka Jak nás podpořit (support.html) ===== */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.support-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #0133C5;
+}
+
+.support-item h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.support-account {
+    display: grid;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.support-account dt {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.support-account dd {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0133C5;
+}
+
+.support-qr {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.support-note {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== Omezení animací pro uživatele, kteří o to žádají ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

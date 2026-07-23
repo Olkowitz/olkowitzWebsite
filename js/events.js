@@ -24,9 +24,13 @@ async function loadEvents() {
       <p>${event.description}</p>
       <p><strong>Kdy:</strong> ${formatDate(event.start)}</p>
       <p><strong>Kde:</strong> ${event.location}</p>
-      <button type="button">Přidat do kalendáře</button>
+      <div class="event-actions">
+        <button type="button" class="btn-calendar">Přidat do kalendáře</button>
+        <button type="button" class="btn-share">Sdílet</button>
+      </div>
     `;
-    item.querySelector("button").addEventListener("click", () => downloadICS(event));
+    item.querySelector(".btn-calendar").addEventListener("click", () => downloadICS(event));
+    item.querySelector(".btn-share").addEventListener("click", () => shareEvent(event));
     container.appendChild(item);
   });
 }
@@ -42,6 +46,26 @@ function formatDate(icsDate) {
 
 function escapeICS(text) {
   return text.replace(/,/g, "\\,").replace(/;/g, "\\;");
+}
+
+// Sdílení akce – nativní sdílení na mobilu, jinak zkopírování odkazu do schránky
+function shareEvent(event) {
+  const shareData = {
+    title: event.title,
+    text: `${event.title} – ${formatDate(event.start)}`,
+    url: window.location.href,
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard
+      .writeText(shareData.url)
+      .then(() => alert("Odkaz na akci byl zkopírován do schránky."))
+      .catch(() => window.prompt("Zkopírujte odkaz na akci:", shareData.url));
+  } else {
+    window.prompt("Zkopírujte odkaz na akci:", shareData.url);
+  }
 }
 
 function downloadICS(event) {
