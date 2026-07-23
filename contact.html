@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0133C5">
     <meta name="description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
     <meta property="og:title" content="Kontakt - Olkowitz.cz">
     <meta property="og:description" content="Kontaktní údaje spolku Olkowitz z.s. - sídlo, IČO, datová schránka, e-mail a mapa.">
@@ -30,15 +31,6 @@
                 "addressLocality": "Oleksovice",
                 "addressCountry": "CZ"
             }
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Olkowitz.cz",
-            "url": "https://www.olkowitz.cz/",
-            "inLanguage": "cs-CZ"
         }
     </script>
 </head>
@@ -90,7 +82,7 @@
 
                 <div class="contact-item">
                     <dt>✉️ E-mail</dt>
-                    <dd>info[zavinac]olkowitz.cz</dd>
+                    <dd><a id="contact-email" href="#">info[zavinac]olkowitz.cz</a></dd>
                 </div>
 
                 <!-- Telefon zatím není veřejný, po zprovoznění odkomentuj a doplň číslo
@@ -104,10 +96,11 @@
             <hr class="divider">
 
             <div class="map-container">
-                <iframe src="https://www.google.com/maps?q=Oleksovice+133,+671+62+Oleksovice&output=embed" width="100%"
-                    height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" title="Mapa - sídlo Olkowitz z.s.">
-                </iframe>
+                <button type="button" id="load-map" class="map-placeholder">
+                    <span class="map-placeholder-icon" aria-hidden="true">🗺️</span>
+                    <span class="map-placeholder-title">Zobrazit mapu se sídlem spolku</span>
+                    <span class="map-placeholder-note">Kliknutím načtete obsah z Google Maps.</span>
+                </button>
             </div>
         </section>
     </main>
