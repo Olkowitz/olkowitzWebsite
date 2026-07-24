@@ -25,9 +25,6 @@
 
 **Important**: Events use ICS date format (`20250730T100000Z`). Parsing via `parseICSDate()` converts to JS Date; `formatDate()` renders in Czech locale.
 
-### Dynamic Year in Footer
-`main.js` sets `#year` element to current year via `new Date().getFullYear()`. This runs on every page automatically.
-
 ### Mobile Menu
 Hamburger button (`.menu-toggle`) toggles `.open` class on `#main-nav`. Links auto-close menu. ARIA attributes managed (`aria-expanded`, `aria-controls`).
 
@@ -37,7 +34,7 @@ All HTML pages follow identical structure:
 ```html
 <header> ... nav container with logo, menu toggle, navigation ...
 <main> ... page-specific content ...
-<footer> ... copyright year, footer nav ...
+<footer> ... footer nav, copyright year...
 <script src="js/main.js"></script>
 ```
 

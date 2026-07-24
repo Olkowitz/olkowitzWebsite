@@ -1,12 +1,6 @@
 // Základní JavaScript pro olkowitz.cz
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Aktuální rok v copyrightu
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-
     // Sestavení klikacího e-mailu (v HTML zůstává [zavinac] jako ochrana proti scraperům)
     const emailLink = document.getElementById('contact-email');
     if (emailLink) {
