@@ -57,6 +57,23 @@ All HTML pages follow identical structure:
 
 ## Developer Workflows
 
+### Adding a Past Event (Historical Timeline)
+When adding a completed event to the "Co máme za sebou" section in `events.html`,
+update **all three** of these in sync:
+
+1. **Static HTML** – new `<div class="event">` block in the appropriate year section
+2. **JSON-LD structured data** – matching `Event` object in the `@graph` array
+   (top of `events.html`, inside `<script type="application/ld+json">`)
+3. **Timeline nav** – if it's a new year, add a link in `<nav class="timeline-nav">`
+   and a new `<section aria-labelledby="rok-YYYY-heading">`
+
+⚠️ JSON-LD must match the visible page content, or search engines may ignore or
+penalize it as misleading structured data. There is currently no automation
+linking these — keep them manually in sync.
+
+Note: `events.json` is separate and only powers *upcoming* events (see above);
+it is not referenced by the JSON-LD `Event` entries.
+
 ### Adding a New Event
 Edit `events.json` with ICS-formatted date `YYYYMMDDTHHMMSSZ` (UTC). Example:
 ```json
