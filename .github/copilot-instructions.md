@@ -9,7 +9,7 @@ Při všech návrzích preferuj jednoduchost, čitelnost, dlouhodobou udržovate
 - Web je **již funkční** a běží na GitHub Pages na adrese [www.olkowitz.cz](https://www.olkowitz.cz).
 - **HTTPS je nastaveno a funkční** (secure).
 - **DNS jsou správně nastavené** na GitHub Pages a soubor `CNAME` v repozitáři obsahuje `www.olkowitz.cz`.
-- Repozitář: [github.com/Olkowitz/olkowitzWebsite](https://github.com/Olkowitz/olkowitzWebsite)
+- Repozitář: [github.com/kajaholub/olkowitzWebsite](https://github.com/kajaholub/olkowitzWebsite)
 - Struktura repozitáře: složky `css/`, `js/`, `images/`, dále `index.html`, `about.html`, `contact.html`, `events.html`, `404.html`, `CNAME`, `README.md`.
 - Vývoj aktuálně probíhá primárně ve **VS Code**. Přechod na IntelliJ IDEA je kdykoliv možný a bez problémů – projekt je čisté HTML/CSS/JS bez buildovacích nástrojů ani editor-specifických závislostí, takže není vázán na konkrétní IDE.
 
@@ -48,7 +48,7 @@ Piš primárně česky. Technické názvy, názvy nástrojů, příkazy, názvy 
 - Doména je registrována u Wedos ([olkowitz.cz](https://olkowitz.cz)).
 - DNS jsou správně nasměrované na GitHub Pages, `CNAME` v repozitáři je nastaven na `www.olkowitz.cz`.
 - Primárním hostingem je GitHub Pages – **web je aktivní a funkční** na [www.olkowitz.cz](https://www.olkowitz.cz), HTTPS je aktivní.
-- Repozitář: [github.com/Olkowitz/olkowitzWebsite](https://github.com/Olkowitz/olkowitzWebsite).
+- Repozitář: [github.com/kajaholub/olkowitzWebsite](https://github.com/kajaholub/olkowitzWebsite).
 - V budoucnu plánován přesun na Raspberry Pi 4 s vlastním serverem (Apache/nginx).
 
 ## Přístup k odpovědím
